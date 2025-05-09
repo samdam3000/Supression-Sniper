@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: sniper-suppression-api
+    runtime: python
+    repo: https://github.com/samdam3000/Supression-Sniper
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    plan: free
+    envVars: []
