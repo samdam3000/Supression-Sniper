@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: sniper-suppression-api
+    runtime: python
+    repo: https://github.com/samdam3000/sniper-suppression-bot
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    plan: free
+    envVars: []
